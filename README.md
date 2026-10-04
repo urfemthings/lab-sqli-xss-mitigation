@@ -1,31 +1,29 @@
-# Lab SQLi & XSS Mitigation
+# Lab SQLi & XSS Mitigation - Tanya
+Link: https://github.com/urfemthings/lab-sqli-xss-mitigation
 
-## Link GitHub
-https://github.com/urfemthings/lab-sqli-xss-mitigation
-
-## Struktur File
-- produk.php (VULNERABLE)
-- produk2.php (SECURE - FIXED)
-- cari.php / cari2.php (XSS demo)
-- dll
+## SCOPE PENTEST
+Target: http://localhost:8000/MywebTest (Lab Lokal)
+Test: /produk.php?id=1 (SQLi), /cari.php?q= (XSS)
+Tools: SQLMap, Nikto, Dirb
+Rules: Hanya localhost, dilarang DDoS/rusak DB
 
 ## 1. HASIL SQLMAP
 
-### produk.php = VULNERABLE
-boolean-based blind, error-based, time-based blind, UNION query
-Parameter: id (GET) is injectable
-Bisa dump isi Kopi, Susu, dll
+### produk.php VULNERABLE
+Type: boolean-based blind, error-based, UNION query
+Parameter id (GET) injectable - Bisa dump Kopi, Susu
 
-
-### produk2.php = AMAN (MITIGASI BERHASIL)
+### produk2.php AMAN (FIXED)
+GET parameter 'id' does not seem to be injectable
+all tested parameters do not appear to be injectable
 
 Fix pake:
 $db->prepare("SELECT * FROM produk WHERE id = :id")
 ->bindValue(':id', $_GET['id'], SQLITE3_INTEGER)
 
-### Bukti
-File: sqlmap-vuln.txt = BOLONG
-File: sqlmap-aman.txt = not injectable
+### Bukti File
+- sqlmap-vuln.txt = BOLONG
+- sqlmap-aman.txt = not injectable (BUKTI FIX BERHASIL)
 
 ## 2. HASIL NIKTO & DIRB
 File: nikto-result.txt
