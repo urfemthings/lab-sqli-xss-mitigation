@@ -1,0 +1,21 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Sun Oct  4 18:48:38 2026
+URL_BASE: http://localhost:8000/
+WORDLIST_FILES: /data/data/com.termux/files/usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+*** Generating Wordlist...                                                                               GENERATED WORDS: 4612
+
+---- Scanning URL: http://localhost:8000/ ----
+*** Calculating NOT_FOUND code...                                                                                                                                              --> Testing: http://localhost:8000/.bash_history                                                               --> Testing: http://localhost:8000/.bashrc                                                               --> Testing: http://localhost:8000/.cache                                                               --> Testing: http://localhost:8000/.config                                                               --> Testing: http://localhost:8000/.cvs                                                               --> Testing: http://localhost:8000/.cvsignore                                                               --> Testing: http://localhost:8000/.forward                                                               --> Testing: http://localhost:8000/.git/HEAD                                                               + http://localhost:8000/.git/HEAD (CODE:200|SIZE:21)
+                                                               --> Testing: http://localhost:8000/.history                                                               --> Testing: http://localhost:8000/.hta                                                               --> Testing: http://localhost:8000/.htaccess                                                               --> Testing: http://localhost:8000/.htpasswd                                                               --> Testing: http://localhost:8000/.listing                                                               --> Testing: http://localhost:8000/.listings                                                               --> Testing: http://localhost:8000/.mysql_history                                                               --> Testing: http://localhost:8000/.passwd                                                               --> Testing: http://localhost:8000/.perf                                                               --> Testing: http://localhost:8000/.profile                                                               --> Testing: http://localhost:8000/.rhosts                                                               --> Testing: http://localhost:8000/.sh_history                                                               --> Testing: http://localhost:8000/.ssh                                                               --> Testing: http://localhost:8000/.subversion                                                               --> Testing: http://localhost:8000/.svn                                                               --> Testing: http://localhost:8000/.svn/entries                                                               --> Testing: http://localhost:8000/.swf                                                               --> Testing: http://localhost:8000/.web                                                               --> Testing: http://localhost:8000/@                                                               --> Testing: http://localhost:8000/_                                                               --> Testing: http://localhost:8000/_adm                                                               --> Testing: http://localhost:8000/_admin                                                               + Going to next directory.
+                                                                               
+-----------------
+END_TIME: Sun Oct  4 18:48:39 2026
+DOWNLOADED: 30 - FOUND: 1
